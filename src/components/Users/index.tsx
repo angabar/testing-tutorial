@@ -41,6 +41,7 @@ const Users = () => {
             return users.data.map((singleUser: userPropsType) => {
                 return (
                     <User
+                        key={singleUser.id}
                         id={singleUser.id}
                         name={singleUser.name}
                         username={singleUser.username}

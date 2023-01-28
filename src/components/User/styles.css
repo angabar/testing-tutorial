@@ -1,0 +1,19 @@
+.user__main-container {
+    border: 1px solid gray;
+    padding: 12px 20px;
+    border-radius: 4px;
+    margin-top: 12px;
+}
+
+.user__main-container:first-of-type {
+    margin-top: 0px;
+}
+
+.user__main-data {
+    font-weight: bold;
+}
+
+.user__email {
+    color: gray;
+    font-style: italic;
+}
