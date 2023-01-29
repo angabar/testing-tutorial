@@ -5,8 +5,8 @@ import Users from "./components/Users";
 
 import "./main.css";
 
-const App = () => {
-    const [openDialog, setOpenDialog] = useState<boolean>(false);
+const App = (props) => {
+    const [openDialog, setOpenDialog] = useState(false);
 
     return (
         <div className="main-container">
@@ -14,6 +14,7 @@ const App = () => {
                 Open users dialog
             </button>
             <Dialog open={openDialog} close={() => setOpenDialog(false)}>
+                <span>{props.getSize()}</span>
                 <Users />
             </Dialog>
         </div>

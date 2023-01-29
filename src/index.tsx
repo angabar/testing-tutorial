@@ -1,14 +1,16 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+import SizeMe from "./components/SizeMe";
 
 const root = ReactDOM.createRoot(
     document.getElementById("root") as HTMLElement,
 );
 root.render(
     <React.StrictMode>
-        <App />
+        <SizeMe>{({ getSize }) => <App getSize={getSize} />}</SizeMe>
     </React.StrictMode>,
 );
 

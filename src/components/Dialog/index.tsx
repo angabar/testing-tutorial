@@ -11,7 +11,11 @@ type dialogPropsType = {
 const Dialog = ({ open, close, children }: dialogPropsType) => {
     return (
         <>
-            <dialog className="dialog__main-container" open={open}>
+            <dialog
+                className="dialog__main-container"
+                data-testid="dialog__main-container"
+                open={open}
+            >
                 {children}
             </dialog>
             {open && (
