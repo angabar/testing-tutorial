@@ -9,20 +9,26 @@ type dialogPropsType = {
 };
 
 const Dialog = ({ open, close, children }: dialogPropsType) => {
-    return (
-        <>
-            <dialog
-                className="dialog__main-container"
-                data-testid="dialog__main-container"
-                open={open}
-            >
-                {children}
-            </dialog>
-            {open && (
-                <div className="dialog__mask" onClick={() => close()}></div>
-            )}
-        </>
-    );
+    if (open) {
+        return (
+            <>
+                <dialog
+                    className="dialog__main-container"
+                    data-testid="dialog__main-container"
+                    open={open}
+                >
+                    {children}
+                </dialog>
+                <div
+                    className="dialog__mask"
+                    data-testid="dialog__mask"
+                    onClick={() => close()}
+                ></div>
+            </>
+        );
+    }
+
+    return null;
 };
 
 export default Dialog;
