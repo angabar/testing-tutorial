@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
 import User, { userPropsType } from "../User";
+import { fetchUsersFromServer } from "./api/fetchUsers";
 
 const Users = () => {
     const [users, setUsers] = useState({
@@ -14,9 +14,7 @@ const Users = () => {
             loading: true,
         });
 
-        const response = await axios.get(
-            "https://jsonplaceholder.typicode.com/users",
-        );
+        const response = await fetchUsersFromServer();
 
         setUsers({
             loading: false,

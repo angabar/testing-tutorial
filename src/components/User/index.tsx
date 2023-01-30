@@ -11,7 +11,10 @@ export type userPropsType = {
 
 const User = ({ id, name, username, email }: userPropsType) => {
     return (
-        <div className="user__main-container">
+        <div
+            className="user__main-container"
+            data-testid="user__main-container"
+        >
             <div className="user__main-data">
                 <span>{id}: </span>
                 <span>{name}</span>
