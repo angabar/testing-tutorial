@@ -22,6 +22,7 @@
         "build": "react-scripts build",
         "test": "react-scripts test --transformIgnorePatterns \"node_modules/(?!@toolz/allow-react)/\" --env=jsdom",
         "test:watch": "react-scripts test --transformIgnorePatterns \"node_modules/(?!@toolz/allow-react)/\" --env=jsdom --watchAll",
+        "test:coverage": "react-scripts test --transformIgnorePatterns \"node_modules/(?!@toolz/allow-react)/\" --env=jsdom --coverage --watchAll",
         "eject": "react-scripts eject"
     },
     "eslintConfig": {
